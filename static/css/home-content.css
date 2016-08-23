@@ -1,0 +1,19 @@
+.container {
+    align-content: left;
+}
+
+
+.cells {
+    height: 297px;
+}
+
+.pricesort, .tags {
+    border: 1px; solid: #2996ff;
+    margin: 10px;
+    padding: 3px;
+    text-align: center;
+}
+
+.fulllist {
+    padding: auto;
+}
