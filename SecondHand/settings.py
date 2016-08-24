@@ -37,9 +37,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'MainApp',
     'UserManagementApp',
     'DashboardApp',
+    'AdminApp',
+    'rest_framework'
 ]
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    # ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -56,7 +67,7 @@ ROOT_URLCONF = 'SecondHand.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,14 +82,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'SecondHand.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'db_demo.sqlite3'),
     }
 }
 
@@ -120,3 +130,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
