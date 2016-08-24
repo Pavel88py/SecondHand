@@ -1,7 +1,7 @@
-"""SecondHand URL Configuration
+"""SH_main URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/dev/topics/http/urls/
+    https://docs.djangoproject.com/en/1.10/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -14,8 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from django.contrib import admin
+from MainApp.views import *
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^$', home),
 ]
