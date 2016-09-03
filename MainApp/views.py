@@ -9,3 +9,7 @@ def home(request):
 
 def uroom(request):
     return render(request, 'uroom.html')
+
+
+def itemform(request):
+    return render(request, 'itemform.html')
