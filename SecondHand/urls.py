@@ -18,4 +18,5 @@ from MainApp.views import *
 
 urlpatterns = [
     url(r'^$', home),
+    url(r'^uroom/$', uroom),
 ]
